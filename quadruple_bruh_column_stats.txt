@@ -1,0 +1,20 @@
+# INCLUDE_DIAGONAL=False: The non_blue count excludes the diagonal cell (x,x).
+# Ratios use exact integer arithmetic and are shown to 50 decimal places; total is column_x.
+# "3,1 pattern" means gcd>1 blocks of lengths 3 and 1 alternate between single blue cells without end.
+# combined_flag is "both" exactly when x_flag="between_primes" and pattern_flag="3,1 pattern".
+# OUTPUT_MODE='both': only rows with combined_flag="both" are written.
+column_x  non_blue  x_flag          pattern_flag  combined_flag                                        non_blue/total  column_x - non_blue
+--------  --------  --------------  ------------  -------------  ----------------------------------------------------  -------------------
+       6         3  between_primes  3,1 pattern   both           0.50000000000000000000000000000000000000000000000000                    3
+      12         7  between_primes  3,1 pattern   both           0.58333333333333333333333333333333333333333333333333                    5
+      18        11  between_primes  3,1 pattern   both           0.61111111111111111111111111111111111111111111111111                    7
+      72        47  between_primes  3,1 pattern   both           0.65277777777777777777777777777777777777777777777778                   25
+     108        71  between_primes  3,1 pattern   both           0.65740740740740740740740740740740740740740740740741                   37
+     192       127  between_primes  3,1 pattern   both           0.66145833333333333333333333333333333333333333333333                   65
+     432       287  between_primes  3,1 pattern   both           0.66435185185185185185185185185185185185185185185185                  145
+    1152       767  between_primes  3,1 pattern   both           0.66579861111111111111111111111111111111111111111111                  385
+    2592      1727  between_primes  3,1 pattern   both           0.66628086419753086419753086419753086419753086419753                  865
+  139968     93311  between_primes  3,1 pattern   both           0.66665952217649748513946044810242341106538637402835                46657
+  472392    314927  between_primes  3,1 pattern   both           0.66666454978069061288082778709207607241443546884791               157465
+  786432    524287  between_primes  3,1 pattern   both           0.66666539510091145833333333333333333333333333333333               262145
+  995328    663551  between_primes  3,1 pattern   both           0.66666566197273662551440329218106995884773662551440               331777
