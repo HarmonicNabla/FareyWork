@@ -1,0 +1,25 @@
+# Source: /home/dev/Documents/Python/PythonProjects/niko_thesis/ColumnCompute/tppg11_column_stats.txt
+# Yellow dot: x_flag="between_primes" and pattern_flag is not "3,1 pattern".
+# Green partition: combined_flag="both"; each partition is treated as a vertical line extending upward without limit.
+# Every region is an open x-interval; its green boundary coordinates are excluded.
+# Counts use only rows present in the source; infinity labels name the two outer regions and do not extrapolate unseen data.
+# Green partitions: 15
+# Total yellow dots: 314,667
+region  left_green_x (exclusive)  right_green_x (exclusive)  yellow_dot_count  first_yellow_x  last_yellow_x
+------  ------------------------  -------------------------  ----------------  --------------  -------------
+     0                 -infinity                          6                 1               4              4
+     1                         6                         12                 0               -              -
+     2                        12                         18                 0               -              -
+     3                        18                         72                 3              30             60
+     4                        72                        108                 1             102            102
+     5                       108                        192                 3             138            180
+     6                       192                        432                 8             198            420
+     7                       432                      1,152                17             462          1,092
+     8                     1,152                      2,592                32           1,230          2,550
+     9                     2,592                    139,968             1,533           2,658        139,662
+    10                   139,968                    472,392             2,748         140,070        472,332
+    11                   472,392                    786,432             2,310         472,542        786,060
+    12                   786,432                    995,328             1,466         786,552        995,118
+    13                   995,328                 57,395,628           261,713         995,340     57,395,058
+    14                57,395,628                 63,700,992            25,827      57,395,718     63,700,830
+    15                63,700,992                  +infinity            19,005      63,701,202     68,349,960
