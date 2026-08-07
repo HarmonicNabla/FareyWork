@@ -14,9 +14,9 @@ Initial-condition anchors verified: 654,286
 Exact arithmetic: yes
 
 Three families verified from the source initial conditions:
-  A observed:  y(t)=r-1/t
-  B reflected: y(t)=r+1/t
-  C constant:  y(t)=r
+  A observed:     y(N)=non_blue/N; y(t)=r-1/t
+  B upper branch: y(N)=r+abs(non_blue/N-r); y(t)=r+1/t
+  C constant:     y(N)=r; y(t)=r
 
 Sampled rate of loss in the unmatched percentage:
   M      through p    combinations      any match       unmatched    drop since sample    drop per added prime
@@ -43,7 +43,7 @@ Sampled rate of loss in the unmatched percentage:
 
 Endpoint at the full requested prime range:
   A observed-family matches:  1,085,559 (98.687181818182%)
-  B reflected-family matches: 71,917 (6.537909090909%)
+  B upper-branch matches:    71,917 (6.537909090909%)
   C constant-family matches:  45,321 (4.120090909091%)
   Points matching multiple families: 117,234
   Unique points matching at least one family: 1,085,559 (98.687181818182%)
@@ -54,14 +54,16 @@ Individual-ODE empirical probability:
   Dataset probability is point_count / all data points.
   Within-family probability is point_count / all matches in that family.
   Coverage buckets count ODEs, not data points.
+  Complete all-ODE table (including zero matches): tppg11_pf_ratio_ode_prime_cap_900000_ode_rankings.csv
 
 Coverage buckets by family:
   family                         zero        one       2-5      6-10     11-100    101-1000      >1000
   A observed (r-1/t)                    0    483,733    151,428     13,930      5,169         26          0
-  B reflected (r+1/t)             654,280          3          0          0          0          0          3
+  B upper branch (r+1/t)          654,280          3          0          0          0          0          3
   C constant (r)                  654,285          0          0          0          0          0          1
 
-Top individual ODEs in each family:
+Top-10 preview of nonzero ODEs in each family:
+  (The complete table, including zero-match ODEs, is in the ranking CSV.)
   family                         N            r       points    dataset probability    within-family probability
   A observed (r-1/t)                 210  27/35              270        0.024545454545%            0.024871978400%
   A observed (r-1/t)                  30  11/15              246        0.022363636364%            0.022661135876%
@@ -73,12 +75,12 @@ Top individual ODEs in each family:
   A observed (r-1/t)                  66  23/33              149        0.013545454545%            0.013725647339%
   A observed (r-1/t)                 570  71/95              145        0.013181818182%            0.013357173585%
   A observed (r-1/t)                  78  9/13              137        0.012454545455%            0.012620226077%
-  B reflected (r+1/t)                  3  1/3            31,272        2.842909090909%           43.483460099837%
-  B reflected (r+1/t)                  2  1/2            24,037        2.185181818182%           33.423251804163%
-  B reflected (r+1/t)                  6  2/3            16,605        1.509545454545%           23.089116620549%
-  B reflected (r+1/t)                 21  3/7                 1        0.000090909091%            0.001390491817%
-  B reflected (r+1/t)                465  15/31                1        0.000090909091%            0.001390491817%
-  B reflected (r+1/t)             54,435  95/191               1        0.000090909091%            0.001390491817%
+  B upper branch (r+1/t)               3  1/3            31,272        2.842909090909%           43.483460099837%
+  B upper branch (r+1/t)               2  1/2            24,037        2.185181818182%           33.423251804163%
+  B upper branch (r+1/t)               6  2/3            16,605        1.509545454545%           23.089116620549%
+  B upper branch (r+1/t)              21  3/7                 1        0.000090909091%            0.001390491817%
+  B upper branch (r+1/t)             465  15/31                1        0.000090909091%            0.001390491817%
+  B upper branch (r+1/t)          54,435  95/191               1        0.000090909091%            0.001390491817%
   C constant (r)                       2  1/2            45,321        4.120090909091%          100.000000000000%
 
 Largest one-prime improvements in the full sweep:
