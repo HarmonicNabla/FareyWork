@@ -1,0 +1,106 @@
+Product-pruned PF-ratio ODE prime-cap sweep
+=============================================
+Input: /home/dev/Documents/Python/PythonProjects/niko_thesis/ColumnCompute/tppg11_column_stats.txt
+Data points: 1,100,000
+Largest column_x: 1,100,000
+Requested prime limit: 900,000
+Primes included: 71,274
+Largest included prime: 899,981
+Valid prime-combination products N <= 1,100,000: 654,286
+Three-family ODE curves represented: 1,962,858
+Distinct ratio keys: 654,286
+Ratio-key collisions: 0
+Initial-condition anchors verified: 654,286
+Exact arithmetic: yes
+
+Three families verified from the source initial conditions:
+  A observed:  y(t)=r-1/t
+  B reflected: y(t)=r+1/t
+  C constant:  y(t)=r
+
+Sampled rate of loss in the unmatched percentage:
+  M      through p    combinations      any match       unmatched    drop since sample    drop per added prime
+     1              2               1     6.307091%    93.692909%         6.307091 pp        6.307090909 pp
+     2              3               3    10.670455%    89.329545%         4.363364 pp        4.363363636 pp
+     3              5               7    10.703818%    89.296182%         0.033364 pp        0.033363636 pp
+     4              7              15    10.775091%    89.224909%         0.071273 pp        0.071272727 pp
+     5             11              31    10.883545%    89.116455%         0.108455 pp        0.108454545 pp
+     7             17             127    11.236364%    88.763636%         0.352818 pp        0.176409091 pp
+    10             29             764    12.045909%    87.954091%         0.809545 pp        0.269848485 pp
+    25             97          16,575    17.599636%    82.400364%         5.553727 pp        0.370248485 pp
+    50            229          54,010    25.641364%    74.358636%         8.041727 pp        0.321669091 pp
+   100            541         110,929    35.897909%    64.102091%        10.256545 pp        0.205130909 pp
+   250          1,583         207,493    50.744727%    49.255273%        14.846818 pp        0.098978788 pp
+   500          3,571         276,326    60.903727%    39.096273%        10.159000 pp        0.040636000 pp
+   750          5,693         313,488    66.301273%    33.698727%         5.397545 pp        0.021590182 pp
+  1,000          7,919         338,401    69.907091%    30.092909%         3.605818 pp        0.014423273 pp
+  2,500         22,307         412,382    80.170273%    19.829727%        10.263182 pp        0.006842121 pp
+  5,000         48,611         464,682    86.583636%    13.416364%         6.413364 pp        0.002565345 pp
+  10,000        104,729         515,292    91.406091%     8.593909%         4.822455 pp        0.000964491 pp
+  25,000        287,117         581,417    94.480455%     5.519545%         3.074364 pp        0.000204958 pp
+  50,000        611,953         633,012    96.753182%     3.246818%         2.272727 pp        0.000090909 pp
+  71,274        899,981         654,286    98.687182%     1.312818%         1.934000 pp        0.000090909 pp
+
+Endpoint at the full requested prime range:
+  A observed-family matches:  1,085,559 (98.687181818182%)
+  B reflected-family matches: 71,917 (6.537909090909%)
+  C constant-family matches:  45,321 (4.120090909091%)
+  Points matching multiple families: 117,234
+  Unique points matching at least one family: 1,085,559 (98.687181818182%)
+  Points matching no family: 14,441 (1.312818181818%)
+  Hypothesis outcome: REJECTED
+
+Individual-ODE empirical probability:
+  Dataset probability is point_count / all data points.
+  Within-family probability is point_count / all matches in that family.
+  Coverage buckets count ODEs, not data points.
+
+Coverage buckets by family:
+  family                         zero        one       2-5      6-10     11-100    101-1000      >1000
+  A observed (r-1/t)                    0    483,733    151,428     13,930      5,169         26          0
+  B reflected (r+1/t)             654,280          3          0          0          0          0          3
+  C constant (r)                  654,285          0          0          0          0          0          1
+
+Top individual ODEs in each family:
+  family                         N            r       points    dataset probability    within-family probability
+  A observed (r-1/t)                 210  27/35              270        0.024545454545%            0.024871978400%
+  A observed (r-1/t)                  30  11/15              246        0.022363636364%            0.022661135876%
+  A observed (r-1/t)                 330  25/33              201        0.018272727273%            0.018515806142%
+  A observed (r-1/t)                  42  5/7               194        0.017636363636%            0.017870977073%
+  A observed (r-1/t)                 390  49/65              180        0.016363636364%            0.016581318933%
+  A observed (r-1/t)                 462  57/77              155        0.014090909091%            0.014278357970%
+  A observed (r-1/t)                 510  191/255             153        0.013909090909%            0.014094121093%
+  A observed (r-1/t)                  66  23/33              149        0.013545454545%            0.013725647339%
+  A observed (r-1/t)                 570  71/95              145        0.013181818182%            0.013357173585%
+  A observed (r-1/t)                  78  9/13              137        0.012454545455%            0.012620226077%
+  B reflected (r+1/t)                  3  1/3            31,272        2.842909090909%           43.483460099837%
+  B reflected (r+1/t)                  2  1/2            24,037        2.185181818182%           33.423251804163%
+  B reflected (r+1/t)                  6  2/3            16,605        1.509545454545%           23.089116620549%
+  B reflected (r+1/t)                 21  3/7                 1        0.000090909091%            0.001390491817%
+  B reflected (r+1/t)                465  15/31                1        0.000090909091%            0.001390491817%
+  B reflected (r+1/t)             54,435  95/191               1        0.000090909091%            0.001390491817%
+  C constant (r)                       2  1/2            45,321        4.120090909091%          100.000000000000%
+
+Largest one-prime improvements in the full sweep:
+  M      prime added      newly matched    unmatched drop
+     1                2             69,378    6.307090909 pp
+     2                3             47,997    4.363363636 pp
+    21               73              4,312    0.392000000 pp
+    23               83              4,250    0.386363636 pp
+    22               79              4,249    0.386272727 pp
+    18               61              4,237    0.385181818 pp
+    20               71              4,216    0.383272727 pp
+    19               67              4,187    0.380636364 pp
+    24               89              4,185    0.380454545 pp
+    15               47              4,149    0.377181818 pp
+    16               53              4,132    0.375636364 pp
+    29              109              4,118    0.374363636 pp
+    30              113              4,098    0.372545455 pp
+    27              103              4,096    0.372363636 pp
+    17               59              4,095    0.372272727 pp
+
+Interpretation:
+  Products larger than the source bound are excluded because their
+  required y(N) initial condition is absent. The CSV contains all
+  prime thresholds; the table above samples the decline. This is an
+  exact deterministic membership test, so no p-value is produced.
